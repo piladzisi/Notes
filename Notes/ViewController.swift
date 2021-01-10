@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor  = .systemOrange // for small titles
+        navigationController?.view.backgroundColor = .systemOrange // for large titles
         tableView.dataSource = self
     }
     

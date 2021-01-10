@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aqK-DL-HK7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -25,17 +25,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aqK-DL-HK7" secondAttribute="bottom" id="EWI-yP-qgb"/>
-                            <constraint firstItem="aqK-DL-HK7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p9q-99-vcp"/>
+                            <constraint firstItem="aqK-DL-HK7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p9q-99-vcp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aqK-DL-HK7" secondAttribute="trailing" id="rbh-bw-vHI"/>
                             <constraint firstItem="aqK-DL-HK7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sbE-hx-wLL"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Notes" id="sZJ-OP-Hxb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KHp-N6-5Ga">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PDR-PP-FNk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="didTapAdd" destination="BYZ-38-t0r" id="U7v-NM-65L"/>
+                                <action selector="didTapAdd" destination="BYZ-38-t0r" id="MqI-CG-vhR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -53,10 +53,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CsG-KR-Hso" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="I1X-bu-BhN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" largeTitles="YES" id="I1X-bu-BhN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemOrangeColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -71,9 +70,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
