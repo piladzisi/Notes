@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B59758FC25ACEB3300DE05C5 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59758FA25ACEB3300DE05C5 /* Note+CoreDataClass.swift */; };
+		B59758FD25ACEB3300DE05C5 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59758FB25ACEB3300DE05C5 /* Note+CoreDataProperties.swift */; };
 		B5B67A5825AA712B00BEA560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B67A5725AA712B00BEA560 /* AppDelegate.swift */; };
 		B5B67A5A25AA712B00BEA560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B67A5925AA712B00BEA560 /* SceneDelegate.swift */; };
 		B5B67A5C25AA712B00BEA560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B67A5B25AA712B00BEA560 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B59758FA25ACEB3300DE05C5 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B59758FB25ACEB3300DE05C5 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B5B67A5425AA712B00BEA560 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B67A5725AA712B00BEA560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B67A5925AA712B00BEA560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		B5B67A5625AA712B00BEA560 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				B59758FA25ACEB3300DE05C5 /* Note+CoreDataClass.swift */,
+				B59758FB25ACEB3300DE05C5 /* Note+CoreDataProperties.swift */,
 				B5B67A5725AA712B00BEA560 /* AppDelegate.swift */,
 				B5B67A5925AA712B00BEA560 /* SceneDelegate.swift */,
 				B5B67A5B25AA712B00BEA560 /* ViewController.swift */,
@@ -142,8 +148,10 @@
 			files = (
 				B5B67A5C25AA712B00BEA560 /* ViewController.swift in Sources */,
 				B5B67A5825AA712B00BEA560 /* AppDelegate.swift in Sources */,
+				B59758FC25ACEB3300DE05C5 /* Note+CoreDataClass.swift in Sources */,
 				B5B67A5A25AA712B00BEA560 /* SceneDelegate.swift in Sources */,
 				B5B67A6225AA712B00BEA560 /* Notes.xcdatamodeld in Sources */,
+				B59758FD25ACEB3300DE05C5 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
