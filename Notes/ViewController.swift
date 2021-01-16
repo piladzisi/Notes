@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         navigationController?.view.backgroundColor = .systemOrange // for large titles
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadNotes()
     }
     
@@ -40,25 +44,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapAdd() {
-        let alert = UIAlertController(title: "Add Note", message: nil, preferredStyle: .alert)
-        alert.addTextField()
-        let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
-            guard
-                let noteBody = alert.textFields?.first?.text,
-                let appDelegate = UIApplication.shared.delegate as? AppDelegate
-            else { return }
-            
-            let context = appDelegate.persistentContainer.viewContext
-            let newNote = Note(context: context)
-            newNote.body = noteBody
-            appDelegate.saveContext()
-            
-            self.notes.append(newNote)
-            self.tableView.reloadData()
-        }
-        alert.addAction(saveAction)
-        present(alert, animated: true)
+       performSegue(withIdentifier: "segue.Main.notesListToNoteEditor", sender: nil)
     }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
