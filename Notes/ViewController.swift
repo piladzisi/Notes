@@ -16,9 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.barTintColor  = .systemOrange // for small titles
-        navigationController?.view.backgroundColor = .systemOrange // for large titles
+        customizeNavBar()
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -26,6 +24,12 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadNotes()
+    }
+    
+    private func customizeNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor  = .systemOrange // for small titles
+        navigationController?.view.backgroundColor = .systemOrange // for large titles
     }
     
     func loadNotes() {
@@ -65,29 +69,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let note = notes[indexPath.row]
+        performSegue(withIdentifier: "segue.Main.notesListToNoteEditor", sender: note)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         
-        let alert = UIAlertController(title: "Edit Note", message: nil, preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.text = note.body
+        if let noteEditorVc = segue.destination as? NoteEditorVC,
+           let note = sender as? Note {
+            noteEditorVc.note = note
         }
-        
-        let updateAction = UIAlertAction(title: "Save", style: .default) { (_) in
-            guard
-                let updatedNoteBody = alert.textFields?.first?.text,
-                let appDelegate = UIApplication.shared.delegate as? AppDelegate
-            else { return }
-          
-            note.body = updatedNoteBody
-            appDelegate.saveContext()
-            
-            self.loadNotes()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            notes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        alert.addAction(cancelAction)
-        alert.addAction(updateAction)
-        present(alert, animated: true)
     }
 }
 
