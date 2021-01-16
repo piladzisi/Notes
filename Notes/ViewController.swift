@@ -48,9 +48,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapAdd() {
-       performSegue(withIdentifier: "segue.Main.notesListToNoteEditor", sender: nil)
+        performSegue(withIdentifier: "segue.Main.notesListToNoteEditor", sender: nil)
     }
-    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -82,9 +81,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
+        if editingStyle == .delete {
+            let note = notes[indexPath.row]
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let context = appDelegate.persistentContainer.viewContext
+            context.delete(note)
             notes.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            appDelegate.saveContext()
         }
     }
 }
