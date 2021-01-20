@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         customizeNavBar()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,10 +89,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             tableView.deleteRows(at: [indexPath], with: .fade)
             appDelegate.saveContext()
         }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        UITableViewAutomaticDimenstions
     }
 }
 

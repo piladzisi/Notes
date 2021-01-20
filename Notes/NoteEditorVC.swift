@@ -56,11 +56,11 @@ class NoteEditorVC: UIViewController {
         
         if let note = note {
             note.body = noteTextView.text
-            note.category = "General"
+          //  note.category = "General"
         } else {
             let newNote = Note(context: context)
             newNote.body = noteTextView.text
-            newNote.category = "New"
+           // newNote.category = "New"
         }
         appDelegate.saveContext()
     }
