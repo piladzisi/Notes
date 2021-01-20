@@ -35,6 +35,7 @@
 		B5B67A6825AA712C00BEA560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D22D5E25B8A28C00579F27 /* Notes v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v2.xcdatamodel"; sourceTree = "<group>"; };
 		B5D22D6025B8A55E00579F27 /* Notes v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v3.xcdatamodel"; sourceTree = "<group>"; };
+		B5D22D6225B8A62900579F27 /* Notes v4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v4.xcdatamodel"; sourceTree = "<group>"; };
 		B5FE930B25B5C79200B1A05C /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -368,11 +369,12 @@
 		B5B67A6025AA712B00BEA560 /* Notes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B5D22D6225B8A62900579F27 /* Notes v4.xcdatamodel */,
 				B5D22D6025B8A55E00579F27 /* Notes v3.xcdatamodel */,
 				B5D22D5E25B8A28C00579F27 /* Notes v2.xcdatamodel */,
 				B5B67A6125AA712B00BEA560 /* Notes.xcdatamodel */,
 			);
-			currentVersion = B5D22D6025B8A55E00579F27 /* Notes v3.xcdatamodel */;
+			currentVersion = B5D22D6225B8A62900579F27 /* Notes v4.xcdatamodel */;
 			path = Notes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
