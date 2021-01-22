@@ -18,11 +18,7 @@ class NoteCell: UITableViewCell {
     }
     
     func populate(with note: Note) {
-        if note.category != nil {
-            categoryLabel.text = note.category
-        } else {
-        categoryLabel.text = ""
-        }
+        categoryLabel.text = note.category?.name
         noteBodyLabel.text = note.body
     }
 }

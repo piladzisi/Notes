@@ -96,25 +96,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Rt-H8-diA">
-                                <rect key="frame" x="16" y="0.0" width="382" height="756"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-p3-w3U">
+                                <rect key="frame" x="16" y="16" width="382" height="724"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dae-cm-vrZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Rt-H8-diA">
+                                        <rect key="frame" x="0.0" y="68" width="382" height="656"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ad-Vf-Wat"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="8Rt-H8-diA" secondAttribute="bottom" id="2FN-9B-Znd"/>
-                            <constraint firstItem="5ad-Vf-Wat" firstAttribute="trailing" secondItem="8Rt-H8-diA" secondAttribute="trailing" constant="16" id="MWb-sW-Cts"/>
-                            <constraint firstItem="8Rt-H8-diA" firstAttribute="top" secondItem="5ad-Vf-Wat" secondAttribute="top" id="NSr-AD-wAb"/>
-                            <constraint firstItem="8Rt-H8-diA" firstAttribute="leading" secondItem="5ad-Vf-Wat" secondAttribute="leading" constant="16" id="ana-uW-M7T"/>
+                            <constraint firstItem="5ad-Vf-Wat" firstAttribute="trailing" secondItem="xdW-p3-w3U" secondAttribute="trailing" constant="16" id="1E7-sZ-Ups"/>
+                            <constraint firstItem="xdW-p3-w3U" firstAttribute="leading" secondItem="5ad-Vf-Wat" secondAttribute="leading" constant="16" id="8OW-J5-5ad"/>
+                            <constraint firstItem="xdW-p3-w3U" firstAttribute="top" secondItem="5ad-Vf-Wat" secondAttribute="top" constant="16" id="Aav-lS-6Lf"/>
+                            <constraint firstAttribute="bottom" secondItem="xdW-p3-w3U" secondAttribute="bottom" constant="16" id="ab4-Ig-S84"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Note" id="9ZR-Wb-Ies"/>
                     <connections>
+                        <outlet property="categoryTextField" destination="Dae-cm-vrZ" id="vW3-Wl-ZcG"/>
                         <outlet property="noteTextView" destination="8Rt-H8-diA" id="odI-p3-7zR"/>
                     </connections>
                 </viewController>

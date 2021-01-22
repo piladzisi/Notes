@@ -17,6 +17,8 @@
 		B5B67A6225AA712B00BEA560 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5B67A6025AA712B00BEA560 /* Notes.xcdatamodeld */; };
 		B5B67A6425AA712C00BEA560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B67A6325AA712C00BEA560 /* Assets.xcassets */; };
 		B5B67A6725AA712C00BEA560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B67A6525AA712C00BEA560 /* LaunchScreen.storyboard */; };
+		B5D22D6D25BB697500579F27 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D22D6B25BB697500579F27 /* Category+CoreDataClass.swift */; };
+		B5D22D6E25BB697500579F27 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D22D6C25BB697500579F27 /* Category+CoreDataProperties.swift */; };
 		B5FE930C25B5C79200B1A05C /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE930B25B5C79200B1A05C /* NoteCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,9 @@
 		B5D22D5E25B8A28C00579F27 /* Notes v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v2.xcdatamodel"; sourceTree = "<group>"; };
 		B5D22D6025B8A55E00579F27 /* Notes v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v3.xcdatamodel"; sourceTree = "<group>"; };
 		B5D22D6225B8A62900579F27 /* Notes v4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v4.xcdatamodel"; sourceTree = "<group>"; };
+		B5D22D6A25BB630F00579F27 /* Notes v5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes v5.xcdatamodel"; sourceTree = "<group>"; };
+		B5D22D6B25BB697500579F27 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B5D22D6C25BB697500579F27 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B5FE930B25B5C79200B1A05C /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +74,8 @@
 		B5B67A5625AA712B00BEA560 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				B5D22D6B25BB697500579F27 /* Category+CoreDataClass.swift */,
+				B5D22D6C25BB697500579F27 /* Category+CoreDataProperties.swift */,
 				B59758FA25ACEB3300DE05C5 /* Note+CoreDataClass.swift */,
 				B59758FB25ACEB3300DE05C5 /* Note+CoreDataProperties.swift */,
 				B5B67A5725AA712B00BEA560 /* AppDelegate.swift */,
@@ -162,6 +169,8 @@
 				B5B67A6225AA712B00BEA560 /* Notes.xcdatamodeld in Sources */,
 				B506B40225B33C14004F551C /* NoteEditorVC.swift in Sources */,
 				B59758FD25ACEB3300DE05C5 /* Note+CoreDataProperties.swift in Sources */,
+				B5D22D6E25BB697500579F27 /* Category+CoreDataProperties.swift in Sources */,
+				B5D22D6D25BB697500579F27 /* Category+CoreDataClass.swift in Sources */,
 				B5FE930C25B5C79200B1A05C /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,12 +378,13 @@
 		B5B67A6025AA712B00BEA560 /* Notes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				B5D22D6A25BB630F00579F27 /* Notes v5.xcdatamodel */,
 				B5D22D6225B8A62900579F27 /* Notes v4.xcdatamodel */,
 				B5D22D6025B8A55E00579F27 /* Notes v3.xcdatamodel */,
 				B5D22D5E25B8A28C00579F27 /* Notes v2.xcdatamodel */,
 				B5B67A6125AA712B00BEA560 /* Notes.xcdatamodel */,
 			);
-			currentVersion = B5D22D6225B8A62900579F27 /* Notes v4.xcdatamodel */;
+			currentVersion = B5D22D6A25BB630F00579F27 /* Notes v5.xcdatamodel */;
 			path = Notes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
